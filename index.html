@@ -1,796 +1,685 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Hexo Theme Redefine">
-    <meta name="description" content="Hexo Theme Redefine">
-    <meta name="author" content="Aria.Vera.Shizuki.Marguerite.Gautier.Andrianovna">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
-    
-    <!--- Seo Part-->
-    
-    <link rel="canonical" href="http://example.com/"/>
-    <meta name="robots" content="index,follow">
-    <meta name="googlebot" content="index,follow">
-    <meta name="revisit-after" content="1 days">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Hexo">
-    <meta property="og:description" content="Hexo Theme Redefine">
-    <meta property="og:url" content="http://example.comindex.html">
-    
-    <meta property="og:site_name" content="AriasagiPuellamagica">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hexo">
-    <meta name="twitter:description" content="Hexo Theme Redefine">
-    <meta name="twitter:image" content="/images/redefine-logo.svg">
-    <!--- Icon Part-->
-    <link rel="icon" type="image/png" href="/images/redefine-logo.svg" sizes="192x192">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-logo.svg">
-    <meta name="theme-color" content="#005080">
-    <link rel="shortcut icon" href="/images/redefine-logo.svg">
-    
-    <title>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Ariasagi&#39;s Rabbithole</title>
+        <meta name="author" content="AriaPuellaMagica" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+        <link rel="icon" href="/images/avatar.jpeg" />
+        <script src="https://cdn.staticfile.org/vue/3.2.47/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/fonts.min.css" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+<script src="/js/lib/home.js"></script>
+
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+            </transition>
+            <nav id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <div class="desktop-menu">
+        <a class="title" href="/">
+            <span>ARIASAGI&#39;S RABBITHOLE</span>
+        </a>
         
-        AriasagiPuellamagica
-    </title>
-    
-<link rel="stylesheet" href="/css/style.css">
-
-    
-<link rel="stylesheet" href="/assets/fonts.css">
-
-    
-    
-    
-    <script id="hexo-configurations">
-    let REDEFINE = window.REDEFINE || {};
-    REDEFINE.hexo_config = {"hostname":"example.com","root":"/","language":"en"};
-    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#005080","avatar":"/images/avatar.jpeg","favicon":"/images/redefine-logo.svg","og_image":{"enable":false,"image_url":null},"article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"/images/background.jpeg","dark":"/images/wallhaven-wqery6-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"font_sizes":{"title":"2.8rem","subtitle":"1.5rem"},"line_height":1.2,"title":"La limbo et Rabbithole du Aria","subtitle":{"enable":false,"list":[]},"custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":true},"code_block":{"copy":true,"style":"mac","custom_font":{"enable":false,"font_family":null,"font_url":null}},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.2.1","friend_links":{"columns":2},"home_article":{"date_format":"auto","category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":3}},"plugins":{"aplayer":{"enable":false,"audio":[{"name":null,"artist":null,"url":null,"cover":null},{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}}};
-    REDEFINE.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
-  </script>
-    
-    
-<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
-
-    
-<link rel="stylesheet" href="/fontawesome/brands.min.css">
-
-    
-<link rel="stylesheet" href="/fontawesome/solid.min.css">
-
-    
-<link rel="stylesheet" href="/fontawesome/regular.min.css">
-
-    
-    
-    
-    
-<meta name="generator" content="Hexo 6.3.0"></head>
-
-
-<body>
-<div class="progress-bar-container">
-    
-        <span class="scroll-progress-bar"></span>
-    
-
-    
-        <span class="pjax-progress-bar"></span>
-        <span class="pjax-progress-icon">
-            <i class="fa-solid fa-circle-notch fa-spin"></i>
-        </span>
-    
-</div>
-
-
-<main class="page-container">
-
-    
-        <div class="first-screen-container flex-center">
-    <div class="content flex-center">
-        <div class="description fade-in-down-animation" >
-          La limbo et Rabbithole du Aria 
-          
-        </div>
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
         
     </div>
-</div>
-
-    
-
-    <div class="page-main-content">
-
-        <div class="page-main-content-top">
-            <header class="menu-wrapper">
-    
-    <div class="menu-content has-first-screen">
-        <div class="left">
+    <div id="mobile-menu">
+        <div class="curtain" @click="shouMenuItems = !shouMenuItems" v-show="shouMenuItems"></div>
+        <div class="title" @click="shouMenuItems = !shouMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;ARIASAGI&#39;S RABBITHOLE</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="shouMenuItems">
             
-            <a class="logo-title" href="/">
-                <h1>
-                AriasagiPuellamagica
-                </h1>
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                </div>
             </a>
-        </div>
-
-        <div class="right">
-            <!-- PC -->
-            <div class="pc">
-                <ul class="menu-list">
-                    
-                        
-                            <li class="menu-item">
-                                <!-- Menu -->
-                                <a class="active" 
-                                    href="/"  >
-                                    
-                                        
-                                            <i class="fa-regular fa-house"></i>
-                                        
-                                        HOME
-                                    
-                                </a>
-                                <!-- Submenu -->
-                                
-                            </li>
-                    
-                    
-                </ul>
-            </div>
-            <!-- Mobile -->
-            <div class="mobile">
-                
-                <div class="icon-item menu-bar">
-                    <div class="menu-bar-middle"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Mobile drawer -->
-    <div class="menu-drawer">
-        <ul class="drawer-menu-list">
             
-                
-                    <li class="drawer-menu-item flex-center">
-                        <a class="active" 
-                        href="/"  >
-                             
-                                
-                                    <i class="fa-regular fa-house"></i>
-                                
-                                HOME
-                            
-                        </a>
-                    </li>
-                    <!-- Submenu -->
-                    
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                </div>
+            </a>
             
-
-        </ul>
-    </div>
-
-    <div class="window-mask"></div>
-
-</header>
-
-
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                </div>
+            </a>
+            
         </div>
-
-        <div class="page-main-content-middle">
-
-            <div class="main-content">
-
-                
-                    <div class="home-content-container fade-in-down-animation">
-    <ul class="home-article-list">
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/12/14/La-hiver-en-Chengdu/">
-                        La hiver en Chengdu
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        从未见过蓝天的孩子们多半以为天空是蜗牛血液的残影而浓绿肮脏的细小树叶则是铜器绽放的鲜花所以 我醒来抑或踏入下一重梦境是正午 清晨 薄暮 还是夜半呢Alter Deneb Sirius Procyon必定也是树冠垂下的丝根
-透过它们的缝隙 我看到了故事...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed Dec 14 2022 02:02:51 GMT+0800">
-                
-                    2022-12-14
-                
-            </span>
-        </span>
-        
-        
+        </transition>
     </div>
-
-    <a href="/2022/12/14/La-hiver-en-Chengdu/">Read more<span class="seo-reader-text">La hiver en Chengdu</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/11/30/%E3%80%8C%E8%AE%B0%E6%A2%A6%E5%92%8C%E7%8B%82%E4%B9%B1%E7%9A%84%E6%AD%BB%E6%B0%B4%E9%93%B6%E6%B2%B3%E3%80%8D/">
-                        「记梦和狂乱的死水银河」
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        “奥雷里亚诺最后一次见到他时，他几乎只剩下模糊的影子，还在喃喃自语：‘我已经在新加坡的沙洲上死于热病。’从此，房间再无法幸免于灰尘、热浪、白蚁、红蚂蚁的侵蚀，蠹虫注定要将书本和羊皮卷中的智慧化为粉末。”影子…”人睡到不知道时候的时候，就会有影来告别，...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed Nov 30 2022 07:22:26 GMT+0800">
-                
-                    2022-11-30
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2022/11/30/%E3%80%8C%E8%AE%B0%E6%A2%A6%E5%92%8C%E7%8B%82%E4%B9%B1%E7%9A%84%E6%AD%BB%E6%B0%B4%E9%93%B6%E6%B2%B3%E3%80%8D/">Read more<span class="seo-reader-text">「记梦和狂乱的死水银河」</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/08/04/%E4%BB%8A%E5%A4%9C%E6%88%91%E5%9C%A8%E5%BE%B7%E4%BB%A4%E5%93%88%E3%80%8D/">
-                        「姐姐 今夜我在德令哈」
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        姐姐，今夜我在德令哈这是雨水中一座荒凉的城除了那些路过的和居住的德令哈……今夜这是唯一的，最后的，抒情。这是唯一的，最后的，草原。我把石头还给石头让胜利的胜利今夜青稞只属于她自己一切都在生长今夜我只有美丽的戈壁 空空姐姐，今夜我不关心人类，我只想你
-...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Thu Aug 04 2022 06:00:58 GMT+0800">
-                
-                    2022-08-04
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2022/08/04/%E4%BB%8A%E5%A4%9C%E6%88%91%E5%9C%A8%E5%BE%B7%E4%BB%A4%E5%93%88%E3%80%8D/">Read more<span class="seo-reader-text">「姐姐 今夜我在德令哈」</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2021/12/25/LastWords/">
-                        LastWords
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        我的心分外地平静。主动丢掉了「生者世界」的牵绊之后，我很享受这段最后的短暂的安宁。
-我曾经是一个「认清世界真相但依然爱着它」的人，也在过去的三年半里身体力行地证明了这一点。我不能埋怨那些我帮助过但只是因为想要活下去而离开我的人，相反，我很庆幸她们终于...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Dec 25 2021 03:55:02 GMT+0800">
-                
-                    2021-12-25
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2021/12/25/LastWords/">Read more<span class="seo-reader-text">LastWords</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2021/11/07/%E7%89%87%E6%96%AD/">
-                        片断
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        忽然想到了2010年11月7日 11年前的今天 是星期日 那天下了很大的冰冷的雨 隱約可以聽到雷聲斷續不止 當然高三時的我完全不care作業 耳機裡放著的是MONO的後搖和（沒錯）阿桑的「寂寞在唱歌」
-有一句歌詞我記得很清楚「天黑得像不會再天亮了 明...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun Nov 07 2021 22:51:16 GMT+0800">
-                
-                    2021-11-07
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2021/11/07/%E7%89%87%E6%96%AD/">Read more<span class="seo-reader-text">片断</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2021/02/25/%E9%A2%A8%E7%89%A9%E8%A9%A9/">
-                        風物詩
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        「風物詩」
-没有任何安全的地方了这个租来的屋子以前算是两人的「避难所」现在充斥着耳语 聒噪的谈话 和 仿佛永无休止的猫叫
-没有任何安全的地方了 在这个城市 这个国家人们高高在上 动物们高高在上互相统治利用而又残杀着思想们和残片们都高高在上残片和血污横...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Thu Feb 25 2021 02:12:51 GMT+0800">
-                
-                    2021-02-25
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2021/02/25/%E9%A2%A8%E7%89%A9%E8%A9%A9/">Read more<span class="seo-reader-text">風物詩</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2021/02/20/%E4%BA%8C%E6%9C%88%E4%BA%8C%E5%8D%81%E6%97%A5/">
-                        二月二十日
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        可能最初自卑感引起的焦虑爆发就来自于知乎上各位优秀而资源强大的mtf吧。
-我承认七宗罪的妒忌在我身上完全不能免俗。深入骨髓的无力和绝望感顺着血管流向每一个细胞。诚然人的价值是不同的，可我再也回不去那个「爱上生命之绝望」的「可爱男孩子」了。
-「不是每个...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Feb 20 2021 23:36:48 GMT+0800">
-                
-                    2021-02-20
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2021/02/20/%E4%BA%8C%E6%9C%88%E4%BA%8C%E5%8D%81%E6%97%A5/">Read more<span class="seo-reader-text">二月二十日</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2019/10/14/%E5%9E%82%E8%80%B3%E5%85%94/">
-                        垂耳兔
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        垂耳兔的两只眼睛颜色是不同的。
-红色的那只和其他的兔子，倒不如说其他蹦蹦跳的小动物一样，只能看到眼前，或是未来的样子。
-然而她还有只蓝色的眼睛。是那种路人看到了会说「这只兔子的眼睛怎么会是蓝色的…摄人心魄的那种。好诡异。」的眼睛。诡异的其实并非它的颜...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Oct 14 2019 05:43:57 GMT+0800">
-                
-                    2019-10-14
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2019/10/14/%E5%9E%82%E8%80%B3%E5%85%94/">Read more<span class="seo-reader-text">垂耳兔</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2019/08/01/%E6%83%8A%E6%A2%A6/">
-                        惊梦
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        在梦里你笑着用手捂在伤口上说 手术很顺利 已经缝合了不会痛的我看着你被推出简陋肮脏的病房内脏是黑的 滴下的血也是大概你真的感觉不到吧
-过去了三年七个月九天我时常会梦到你还有那些生者与未生者 也早就过了你离开时的年纪梦境从扯出的内脏里 被翻转出来 扭曲...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Thu Aug 01 2019 09:05:36 GMT+0800">
-                
-                    2019-08-01
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2019/08/01/%E6%83%8A%E6%A2%A6/">Read more<span class="seo-reader-text">惊梦</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2019/05/27/%E4%BA%94%E6%9C%88%E4%BA%8C%E5%8D%81%E4%B8%83%E6%97%A5/">
-                        五月二十七日
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        这城市没有春天只有winter spring和summer spring雨云和夸张的蓝天飞速切换她大概明白了她的宿命和呼啸的风声一样被「不安定」的空气吸引————然后在什么东西上 撞到粉碎
-手抖越来越严重了 写字好像起飞耳边是打字声 翻书声 还有雷声...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon May 27 2019 16:09:02 GMT+0800">
-                
-                    2019-05-27
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2019/05/27/%E4%BA%94%E6%9C%88%E4%BA%8C%E5%8D%81%E4%B8%83%E6%97%A5/">Read more<span class="seo-reader-text">五月二十七日</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-    </ul>
-
-    <div class="home-paginator">
-        <div class="paginator">
-    
-
-    
-        <a class="next btn"
-           href="/page/2/"
-        >Next</a>
-    
-</div>
-
-    </div>
-</div>
-
-
-                
-
+</nav>
+
+            <transition name="into">
+            <div id="main" v-show="!loading">
+                <div id="home-head">
+    <div
+        id="home-background"
+        ref="homeBackground"
+        data-images="/images/background.jpeg"
+    ></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>Ariasagi&#39;s Rabbithole</h1>
+                <h3></h3>
+                <h5></h5>
             </div>
+        </span>
+    </div>
+</div>
+<div id="home-posts-wrap"  ref="homePostsWrap">
+    <div id="home-posts">
+        
+
+<div class="post">
+    <a href="/2022/12/14/La-hiver-en-Chengdu/">
+        <h2 class="post-title">La hiver en Chengdu</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/12/14
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>从未见过蓝天的孩子们<br>多半以为天空是蜗牛血液的残影<br>而浓绿肮脏的细小树叶<br>则是铜器绽放的鲜花<br>所以 我醒来抑或踏入下一重梦境<br>是正午 清晨 薄暮 还是夜半呢<br>Alter Deneb Sirius Procyon<br>必定也是树冠垂下的丝根</p>
+<p>透过它们的缝隙 我看到了故事书本里的星辰 宇宙 和永无止尽的爱<br>夜雾沉沉<br>那么 路灯是橘子味冰淇淋还是橘子汽水涌起的泡沫呢<br>原来呀 是埋葬朽腐骸骨和霉菌花朵的<br>严冬<br>Flora Aeolus Zephyrus Venus<br>白帆与黑帆浮在铁红色的海水上<br>慢慢滑行——</p>
+<p>不是梦境 因为我从未醒来过<br>你铅灰色的死亡 你烟黑色的提琴 你铜绿色的头发 你的梦境</p>
+<p>睡下吧 endormez-vous<br>不是梦境 不要醒来了</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2022/12/14/La-hiver-en-Chengdu/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2022/11/30/%E3%80%8C%E8%AE%B0%E6%A2%A6%E5%92%8C%E7%8B%82%E4%B9%B1%E7%9A%84%E6%AD%BB%E6%B0%B4%E9%93%B6%E6%B2%B3%E3%80%8D/">
+        <h2 class="post-title">「记梦和狂乱的死水银河」</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/11/30
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>“奥雷里亚诺最后一次见到他时，他几乎只剩下模糊的影子，还在喃喃自语：‘我已经在新加坡的沙洲上死于热病。’从此，房间再无法幸免于灰尘、热浪、白蚁、红蚂蚁的侵蚀，蠹虫注定要将书本和羊皮卷中的智慧化为粉末。”<br>影子…<br>”人睡到不知道时候的时候，就会有影来告别，说出那样的话：“<br>“我只有一半影子，和您一样。”</p>
+<hr>
+<h2 id="0"><a href="#0" class="headerlink" title="0"></a>0</h2><p>至于暗影曈曈的房间，就当它是下午六点半吧。北边浑浊昏黄如下雪天空一般的河口上吹来冰冷潮湿的空气，和布满孔洞的石头房子并无太大区别。这是她一天中的第一个夜晚，属于生者而非死者魂灵还是什么别的东西的夜晚。该从床上爬起来了。</p>
+<p>我们出去散步吧。<br>散步…? </p>
+<p>我闭上，然后她睁开眼睛，和事实上并不多的”往常“一样跟在她后面，穿过房间里堆着一些垃圾的迷宫走道，走出梦境来到锈蚀剥落的电梯间。11层，电梯挂在绞索和齿轮和铁栅栏上慢慢爬下，进入一条河底只有白色荧光街灯的窄巷。对垂耳兔来说，除了神性的水晶球世界，其余之处和冥界也早就含混不清。垂耳兔拿出安澜的手机，”好像明天上午9点有一趟去南京的车。“<br>你说过的呀，所以我们现在就要出发了。<br>好。</p>
+<p>河道是那种地方再普通不过的、早就不知道开凿时间并且已经淤塞的死水银河，可能会有俗气的白石栏杆和暗红色钢架托着管道跨过，也可能没有。影子和垂耳兔和安澜和她顺着堤岸向前走。<br>玛格丽特小姐的一天有几个夜晚呢？<br>对不起，喵咪不知道。我们该回去了，这条街所有小餐厅都关门了。<br>好。</p>
+<p>影子和垂耳兔抱着安澜跟在后面。<br>不对。河底的世界垂耳兔在多年前见过，是夹着银灰的水蓝色而不是和宁芙宫殿一样的灰绿色。所以这不是冥界吗？<br>这又是哪里呢？不过影子很信任她，信任到希望有真实的肉体在她胸口融化，拥抱着成为她，所以顾不得太多就跟了上去。</p>
+<p>“去了南京还能回来吗？我真的不记得有和喵咪说过这样的行程了。”<br>有的哦，那天下午兔兔在发作，一边哭一边和喵咪说接下来几天的安排，然后喵咪太困就睡着了。<br>“对不起…看来是兔兔的影子忘记了。”<br>我睁开，然后她闭上眼睛。</p>
+<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>“Ave Maria…Gratia plena. Maria gratia plena, Maria gratia plena.<br>…アヴェ、アヴェードウミヌス。”<br>“Dominus tecum.”</p>
+<p>水晶球。不对是八音盒。<br>照理说影子在冥界是感受不到温度的，可这浸泡在死亡本身一般的冰冷又来自哪个影子，还是安澜和垂耳兔呢？</p>
+<p>对，是老式低瓦数白炽灯的昏黄色。安澜记得很久以前在学校里学到过，波源在相对观测者移动时，感觉到的频率会降低，这个现象叫做多普勒效应。<br>这样就说得通了，影子所处的世界也好冥界也好都在向某个指向安澜和垂耳兔最恐惧的记忆碎片的方向扑过去，所以这一切的一切——白炽灯、墙角扇形的掉色木质搁架、颓圮斑驳涂满了血污和油污的厨房、泛黄的荧光街灯和电线、灰绿色河水、还有房间里浓到化不开的血红色雾气，都是光线和维持它的世界和影子在变弱、频率在慢慢降低的结果。</p>
+<p>房间？<br>“喵咪，是11层有粉色床单白色五斗橱的朝南房间吗？”<br>影子不断放大变淡，又慢慢上升，覆盖了房间和血红色雾气和不知道什么颜色的夜空，好像要离她们而去。</p>
+<p>“Benedicta tu in mulieribus, et benedictus.”</p>
+<p>好。</p>
+<p>是一个和她的暗沉脸色很像的小女孩，光线太暗看不出年龄，但几乎只和灶台一般高——有着扁一些的五官和更脏污的破旧衣服，在用一把刀刃比手指大不了多少的厨刀切着什么带血的东西。她身上的棉絮条绒衣服和鞋子都破了洞，脸上也有刮擦伤痕和淤青，但…<br>…确是她无疑了。<br>她身旁还有个比她稍高些的男孩，同样是比灶台高不了多少，同样是脸上更多更深的刮擦和淤青，衣服的手肘和膝盖似乎有在粗糙的地面用力摩擦过的痕迹，但——对，是影子，安澜和垂耳兔的红色眼睛都看不到的影子，只是更深更浓一些。他似乎在旁边试着徒劳地踮起脚望向墙角最高处搁架上的某个笑容诡谲牙齿外露的木质形体，“身体”也挡在女孩身后试图——用影子的方式——覆盖充盈着她。房间里阒静无声，唯一的声音来自某种木槌敲打金属薄片的、像是琴弦松弛走音的钢琴发出的旋律，但垂耳兔的蓝色眼睛似乎不大能分辨。</p>
+<p>然而最让人不寒而栗的地方在女孩厨刀旁已经发霉剥落的砧板和嵌入其中的圆盘形物体——垂耳兔的蓝色眼睛立刻就意识到，是卷尺，不是餐盘、木碗或是什么别的符合这间昏黄血红色房间气氛的东西。<br>是某个世界里童年时期的她们，或是他们，不过已经不重要了。</p>
+<p>暗幽幽的蓝光闪过，垂耳兔只是伸出爪子尝试着触碰那盘大到不合所在世界规则的卷尺，男孩的眼睛就霎时变得血红，夺过女孩手中的厨刀发狂一般扑向垂耳兔和安澜，尽管厨刀的尺寸和锈迹斑驳的刀刃对她们的威胁和钢笔尖并无二致。灰绿色的银河开始顺着墙壁和门缝漫进房间，上升闪烁并且旋转。最后几秒钟，垂耳兔还来得及用卷尺量了女孩的身高——1米07。<br>她们所处的世界看起来在急速崩解，时间不多了。</p>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>“…”<br>“et benedictus fructus ventris——“<br>“ventris tuイーイエエースース。”</p>
+<p>八音盒！<br>八音盒…是八音盒和男孩暗影里嘴巴的声音。尽管八音盒里的东西无论是影子还是安澜还是垂耳兔都不想看到，但旋律无疑是满地湿淋淋的落叶和被白杨树紧紧夹着的林荫路。清晨的积雪早就被比骨髓还冷的雨融化殆尽，分不清是低云还是雾的影子里有断续而响亮的雷声。安澜试着忘记要被整个人从中间撕裂的疼痛，和脑中早已不受控制的旋律一起从天花板和被雨水敲打的玻璃外望向自己的身体，或是什么别的肮脏污秽的东西。</p>
+<p>也不对。两个孩子——女孩和她的影子也好，都无所谓——显然包裹在一副出生起就营养不良的身体里，那样的孩子长到1米07的身高至少要五岁或是更晚才可能。蓝色眼睛飞速转动，按五岁计算的话，这个在被碎片剥离的世界也好梦也好冥界也好，时间是2003年。</p>
+<p>好。</p>
+<p>她们疯一样跟着两个孩子夺门而出，楼道的窗子一击即碎——影子显然感觉不到疼痛，而楼房的高度对安澜和垂耳兔而言如同爱丽丝在兔子洞里的建筑，何况她们也从比石墙高得多的地方坠落过。院外的街道还没有被灰绿色银河淹没，树冠高大到包裹住路面的法国梧桐、锈蚀到看不清字迹的公交站牌、影影绰绰充斥着秋季烧荒灰霾的天空，一切的一切都还是昏黄色。垂耳兔趴在安澜的肩上，蓝色眼睛被安澜紧紧攥在左手里，直到她们再也分不清天空和地面，影子和人形，尘土与银河，瘦骨嶙峋的流浪动物和垃圾箱里的肮脏玩偶。两个孩子不见了。</p>
+<p>她们依然没有停下。一家金属招牌剩下一半店名的小卖部还是什么——不重要了，门口的藤桌旁坐着几个灰绿色的人，边读着像是报纸的东西边说着她们根本听不懂的话，方言也好完全不同的语言也罢——也不重要了。安澜径直冲了上去，</p>
+<p>“现在是03年对不对，是‘非典’，是有人坐着飞船上了太空对不对，快告诉我…！” “你们都聋了吗，你们走丢了，快跟我回去！…”<br>”有两个五六岁的孩子浑身是伤，从这里跑过去，你们没看到吗？！…“<br>”…”</p>
+<p>毫无反应。<br>蓝色眼睛开始变得冰冷，但安澜松开差点——如果是真实的人——被摇晃到散架的几个“人”继续追逐前，瞟了一眼“他们“手中的报纸，是11月14日星期五。对，影子还有些残存的还未被灰绿色银河吞没的记忆，和“她”爬下电梯的时候是同一天。可是来不及了。从世界边缘剥裂的碎片和银河恢复了安澜和垂耳兔熟悉的尺寸，海啸一般吞没了还在这个鬼知道是什么的碎片里迷路的她们，吞没了蓝色眼睛里层层叠叠的人形和隆隆轰鸣的机械，吞没了影子和安澜瞳仁里闪烁明灭定位灯一样的红光，吞没了一切，吞没了秋季干燥的薄云和高远天空。</p>
+<p>“…”<br>“Ave Mari——a.”<br>“…”</p>
+<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>蓝色眼睛再度睁开的时候，发现自己和垂耳兔靠在一幢污秽的乳白色瓷砖贴面墙支撑的、摇摇欲坠的平层建筑的墙根下。碎片的灰绿色显然早已淹没了这处姑且算是废弃巴士站一样的砖土堆，而四处游荡彷徨、动作像是行走在污水池底部的人也几乎全都身着和碎片一样的、如同枯叶和苔藓一样灰绿色的布袋衣服。如果是废弃车站，那这些姑且算是“人”的形体算是在等车罢——安澜和垂耳兔心想——那它也可以带我们找回充斥着熟悉碎片的空气。</p>
+<p>嗯，一定。</p>
+<p>四下里游动着她们也好影子也好根本听不懂的语言或是方言——不重要了。她们瞄了一眼这座幻象和透明建造的车站的大屏幕，几乎所有车次都是通往她们在任何有印象的地图上都没见过的地名。车站被一排落满厚厚土黄色灰尘的法国梧桐紧紧包裹，周围是破落的“南方”苏式住宅和早已开裂的铁皮瓦片棚户，更远处是尘土弥漫的似路非路的线条和方块———在这一切的极远处，无数根高耸到令人恐惧的烟囱直直插入早已吞噬了雾气和煤烟和房屋和地面和影子的、从未可见的天穹。</p>
+<p>好。</p>
+<p>“…（好熟悉的降B大调，是什么旋律呢）”<br>“…in hora mortis, mortis nostrae”<br>“…in hora mortis nostrae”</p>
+<p>”喵咪？”<br>“喵咪就没办法弹十度，喵咪是小爪爪。B2和A3D4音程都够不到。”<br>“…”<br>“喵咪自己别扭一会好不好，兔兔一晚没合眼快去睡吧，真的只是很害怕很害怕兔兔生气啊（断续变成响亮的哭泣声）”<br>“我…”</p>
+<p>好。<br>不对。影子在原本应当是门闩合页掉落的检票口门外巴士停泊的地方注意到一位紫绿色胡子和长满了霉菌而变成灰发的、穿着脏污但无疑曾经华美的罗姆人长袍裙的老者。啊…又是什么呢。</p>
+<p>“假牙。”<br>“垂耳兔你在说什么呀，我们要回去你还没明白吗！我们不想永远和活死魂灵一样存在在这里，我们想死，我们在那片半人多厚的冰淇淋雪地上睡着了，你忘了吗！”<br>“假牙…假牙…绿苔…”<br>“绿苔…羊皮卷…”</p>
+<p>…剩下撕心裂肺的哭喊和吼叫。</p>
+<p>安澜没了蓝色眼睛彻底发狂了。她抓起陪着她死掉过无数次——岸边结冰的汹涌海水、松软香甜的冰淇淋雪地、破落船厂起重机急速坠下的货箱、破碎炸裂的玻璃瓶喷出的亮白色烈火…全都被她抛在了鬼知道什么地方——的时候似乎永远在她身体里的垂耳兔，和只有蓝色眼睛看得到的影子，重重地摔在遍是尖锐碎石子的地面——暂且这样叫“人们”脚下的坚实平面吧——然后看着弹簧、绒毛、血红色葡萄和蓝宝石滚落一地。当然，还少不了泛红的纤维肠子和嘴巴。她什么都不记得，也什么都不想管了。</p>
+<p>好。</p>
+<p>她只想死。<br>在这个没有死亡的世界里，被来自随便哪个世界的生命遗忘大概也算是死掉——第二次，“另一次”死亡。也或许得不到死亡这样的“特权”，不过安澜她早就死了心——活过来多少次，就钻进垂耳兔粉碎机留下血肉模糊的一堆和内脏和骨渣。她不信。</p>
+<h2 id="4"><a href="#4" class="headerlink" title="4"></a>4</h2><p>“我听见掌管众水的天使说：<br>‘昔在，今在的使者啊，<br>你这样判断是公义的，<br>他们曾流圣徒与先知的血，<br>现在你给他们喝，这是他们所该受的。‘”</p>
+<p>一个幽幽的、仿佛来自墙壁又来自南方某朵晚霞底部天空的声音，“她那淡淡的‘影子’也就消失，像水消失在水中。Y su tenue imagen se perdió, como el agua en el agua.”<br>“诶？”<br>“是的吧。”</p>
+<p>“…in hora モールチス ノーウストラエ”<br>“…”</p>
+<p>“El Agua?”<br>“Cien años de soledad?”</p>
+<p>安澜望着垂耳兔的一地残骸，只剩下咕噜噜转动的蓝宝石——很好，这说明她没有因为自己无法控制的暴怒而惨死。她只是站在那里，“无处之央”，唯一残存意识的大脑在暴怒的同时拼命寻找修补垂耳兔眼睛的办法，唯独彻底忽略了早已悄然来到她身边的那位华丽发霉长袍老者。</p>
+<p>“…”<br>“弗朗西斯科何塞阿卡迪奥佩特拉奥雷里亚诺雷梅苔丝乌尔苏拉阿玛兰妲”<br>“你该去学做小金鱼手艺了”<br>“…”</p>
+<p>“你只有五分钟时间在车站找到过去的她和陪着她的孩子，才能回到你所属的世界。”<br>安澜一愣，骨髓渗满了冰。<br>“梅尔基亚德斯…？”<br>“不然就会永久作为只有她们可见的影子，更无从谈起死亡。”</p>
+<p>好。</p>
+<p>那垂耳兔呢？<br>“她是你的心。如果你早就意识到只是不愿承认，那她至此已经实现了她存在的意义。兔子的形体只是载体，你也早就明白。”<br>可是我没有心。它被十八年前让我动弹不得的那件东西决绝地撕成了两半。<br>“她就是。”<br>我没有死？<br>“从来没有。”<br>“这里没有暴风雪，就算置换回真实世界，最近的海洋也远在三天马车的距离以外。”<br>你的假牙呢。<br>“被蚂蚁吃掉，化作席卷镇上一切的龙卷风”</p>
+<p>嗯？喵咪？</p>
+<p>这时透过碎片海啸的灰绿色，蓝色眼睛终于看清听了周围的环境和人和声音——是某种极其拗口咬舌的北方方言。灰绿色的人们背着板结着黄土块的、姑且算是背包的东西在脏污不堪的宁芙宫殿底部游走，鱼贯举起血肉模糊的空手——大概是车票吧，安澜和垂耳兔想到——致意，钻进那些和他们同样覆盖了几寸厚泥土的载具，和充斥着细小黑色颗粒的烟雾一同远去。</p>
+<p>她们已经再清楚不过，需要在一群看不出任何区别的湖底淤泥生物里找到两个孩子，看来时间不多了。天色暗下去和亮起来在这里并无多大区别。安澜尽力想着上一次生命里的“故乡”，那里有巨浪滔天的汹涌大海、积雪盈尺的卵石滩、最娇媚明丽的六月南方看上去高不可攀的山顶残留的雪帽…对，还有秋……算了。就这样吧。</p>
+<p>是湿淋淋的黄绿色落叶和冰冷急促、可能夹杂着霰粒和远处雷鸣的冬雨。</p>
+<p>11点14分…影子的记忆是11月14日星期五。不过男孩——叫他影子也好——衣服上的破洞和带血擦痕哪里去了？女孩身上倒是没有血迹，衣服也是完整的。最关键的是卷尺…卷尺不在他们身上。不管那么多了。</p>
+<p>我尽可能轻柔地走过去，缓缓伸出手想要拥抱两个血泊、毒气和无止尽殴打中的孩子。嗯，诡谲而疑惧的味道是带一点烧焦头发的橘子味。</p>
+<p>“パッチ”<br>诶</p>
+<h2 id="5"><a href="#5" class="headerlink" title="5"></a>5</h2><p>“Espero que esa suciedad no te haya tragado, Rebecca.”<br>我不会为了得不到的爱人去吃土。<br>一片目眩神迷耳鸣的亮白色，间或可以听到钢轨摩擦声。<br>¿sabes dónde estás?<br>一个车站？像是铁路车站。可世界上火车站大概比我们的头发还要多，我想找到我的垂耳兔，然后回家。<br>对，回“家”。</p>
+<p>“He muerto de fiebre en los médanos de Singapur.”<br>他早就死了。所以我也是吗？</p>
+<p>“A——ve Mari—a.”<br>“b-flat Coda”</p>
+<hr>
+<p>“我用我的遍身伤痕、贫穷破落城市的绝望日落、我的寂寞黑暗、我心的饥渴、久久望着孤月之人的悲哀、你出生前多年的傍晚绽放的黄玫瑰、将死和已死的灵魂、已死者和未生者，和山茶花海里死去的、流着我的血液的她，爱着你。”</p>
+<p>——Mademoiselle M.C.A.G<br>——J.L.B</p>
+<p>“都是什么呀…山茶花的颜色明明是咳出的鲜血。”</p>
+<h2 id="1-1"><a href="#1-1" class="headerlink" title="-1"></a>-1</h2><p>白亮而冷冰冰的荧光，所以安澜是被带到了哪座车站呢？<br>“兔兔（翻了个身），喵咪睡多久了…？”<br>“巴黎北站？不对，那里灯光是暗黄色。上野站…也不对，这间屋子颜色太素了。沈阳北站？更不对，影子的燕鸥视角早就知道那里已经是雪白一片了。那…”<br>“兔兔！兔兔睡醒了吗？”</p>
+<h2 id="6"><a href="#6" class="headerlink" title="6"></a>6</h2><p>啊！<br>我…对的。身上没来得及脱掉的米黄色裙子和湿掉的棉质奶白色衬衫，是影子。<br>不是“影子”。<br>“八点二十四，喵咪睡了九十八分钟。”</p>
+<p>喵咪有点饿了，工作的事情想回来睡前做，我们出去次饭散散歩吧。<br>嗯，好呀。<br>我紧紧抓住“她”的手，没有血污和卷尺砧板，衣服和鞋子也都干净整洁的她。<br>是牛油果乳液的味道。真好。</p>
+<p>“喵咪，我们是要去楼下罗森便利店买热饮和夜宵吗？”<br>“嗯！兔兔也饿了呢。换个衣服就出门呀。”<br>“最爱你了。”<br>“我也是。”<br>门外依然是车灯投影在锈蚀金属上的流动故事、宁芙宫殿、被电线杆淹没的死水河底。</p>
+<p>还有黑沉沉的暗夜。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2022/11/30/%E3%80%8C%E8%AE%B0%E6%A2%A6%E5%92%8C%E7%8B%82%E4%B9%B1%E7%9A%84%E6%AD%BB%E6%B0%B4%E9%93%B6%E6%B2%B3%E3%80%8D/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2022/08/04/%E4%BB%8A%E5%A4%9C%E6%88%91%E5%9C%A8%E5%BE%B7%E4%BB%A4%E5%93%88%E3%80%8D/">
+        <h2 class="post-title">「姐姐 今夜我在德令哈」</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/8/4
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>姐姐，今夜我在德令哈<br>这是雨水中一座荒凉的城<br>除了那些路过的和居住的<br>德令哈……今夜<br>这是唯一的，最后的，抒情。<br>这是唯一的，最后的，草原。<br>我把石头还给石头<br>让胜利的胜利<br>今夜青稞只属于她自己<br>一切都在生长<br>今夜我只有美丽的戈壁 空空<br>姐姐，今夜我不关心人类，我只想你</p>
+<p>Dear sis, my love<br>Desperately tonight, exiled to DeLingHa,<br>murky, and shrouded.<br>The Erebus left nothing but<br>Desolated, but the solitary, misanthropic, Gobi desert,<br>for the pathetic poet.</p>
+<p>Dear sis, desperately tonight,<br>my figure exiled at DeLingHa——<br>Another town drinking the dismal rain<br>Except for those left their anima or<br>their cadaver submerged by ruthless sand<br>and gravel.</p>
+<p>It’s the irreplaceable bursting, finale,<br>the irrefutable ultimate, finale,<br>of Moorland born and meant to be barren.<br>I re-hatched Sisyphus back to his boulder<br>By-stood Trojans getting sunk in their triumph,<br>Triumph.</p>
+<p>Albeit, those Tibetan barley blooms herself, waywardly,<br>tonight, those nights.<br>Every single creature flourishes——<br>To whom I could find my intimate, mere,<br>but the ruthlessly Gobi sparkles,<br>Nothing, Niente, Nihil, Rien.</p>
+<p>Sis, beloved<br>I‘m caring nothing about anthros<br>Aber peerlessly, obsessively, missing you.</p>
+<p>——credit 海子<br>——mainacally translated アリア</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2022/08/04/%E4%BB%8A%E5%A4%9C%E6%88%91%E5%9C%A8%E5%BE%B7%E4%BB%A4%E5%93%88%E3%80%8D/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2021/12/25/LastWords/">
+        <h2 class="post-title">LastWords</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2021/12/25
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>我的心分外地平静。主动丢掉了「生者世界」的牵绊之后，我很享受这段最后的短暂的安宁。</p>
+<p>我曾经是一个「认清世界真相但依然爱着它」的人，也在过去的三年半里身体力行地证明了这一点。我不能埋怨那些我帮助过但只是因为想要活下去而离开我的人，相反，我很庆幸她们终于学会了爱自己。我甘愿做这个被牺牲掉的人。</p>
+<p>我从知乎知道了MtF的存在，也知道了自己属于其中一员，亦是从这里认识了后来我试图从深渊中拯救出来的人，和曾经在我最想死的时候像猫咪用自己的一条命换给自杀者一样让我对世界重新有了那么一点点虚妄的希望的人。</p>
+<p>六年下来我见过太多离开我们的人了。我很想她们。这六年也让我意识到了「我可能不适合活在这个人类永远会伤害同类的世界上」这样的事实。2019年5月13日我尝试过离开这里，但还是运气不好被人发现送去了ICU。从那以后我看上去不再会尝试自杀了，但是这样的念头依然在我的大脑里徘徊不去。</p>
+<hr>
+<p>无论从世俗社会的角度，还是对社群与人类贡献的角度，我都是一个不折不扣的废人。明年4月底我就满27岁了，20岁那年我的打算是30岁的时候去自杀，生前想要为科研尽自己微薄的力量。我终究没有做到，甚至连原先的学校都已经回不去了。我不再认为继续苟活在这个世界对自己和心爱的人们有任何好处。</p>
+<p>所以，如果没有意外的话，下一个生日之前我会变成人间风雨，陪着大家。我该启程去那个鲜花和彩色气球的世界了。</p>
+<p>再见啦。大家圣诞快乐。 <br>прощай.</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2021/12/25/LastWords/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2021/11/07/%E7%89%87%E6%96%AD/">
+        <h2 class="post-title">片断</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2021/11/7
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>忽然想到了2010年11月7日 11年前的今天 是星期日 那天下了很大的冰冷的雨 隱約可以聽到雷聲斷續不止 當然高三時的我完全不care作業 耳機裡放著的是MONO的後搖和（沒錯）阿桑的「寂寞在唱歌」</p>
+<p>有一句歌詞我記得很清楚「天黑得像不會再天亮了 明不明天也無所謂了」薄暮時雨下得最大 像夏天的急雨噼啪敲在北邊的窗玻璃上 灰墨色的雲壓得很低很低從東北方逼近 好像真的不會再天亮了一樣</p>
+<p>第二天要請假去看精神科醫生 一邊坐在診室裡看著外面早就結凍成雪花的雨和珍珠白色的天空 一邊聽著叫「父親」那個男人和醫生說著沒用的話 給的診斷是「創傷性伴精神病發作的重度抑鬱和重度焦慮」 那個男人當場暴跳如雷 我很同情那位醫生</p>
+<p>未成年只可以開sertraline</p>
+<p>想到阿桑33歲的時候就因為淋巴癌離開人世 如今知道她名字的人也已寥寥 可是去世的時候身邊有戀人陪伴 已經是我一直求之不得的事情了 我很羨慕 我希望脖子右側的淋巴瘤惡變 這樣不用自殺也可以死掉了<br>我需要等到33歲嗎 還是要更久呢</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2021/11/07/%E7%89%87%E6%96%AD/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2021/02/25/%E9%A2%A8%E7%89%A9%E8%A9%A9/">
+        <h2 class="post-title">風物詩</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2021/2/25
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>「風物詩」</p>
+<p>没有任何安全的地方了<br>这个租来的屋子以前算是两人的「避难所」<br>现在充斥着耳语 聒噪的谈话 和 仿佛永无休止的猫叫</p>
+<p>没有任何安全的地方了 在这个城市 这个国家<br>人们高高在上 动物们高高在上<br>互相统治利用而又残杀着<br>思想们和残片们都高高在上<br>残片和血污横飞 身体和灵魂的碎片</p>
+<p>像兀鹫扑到钉死在十字架上的人<br>像野犬见到恶战过后的旷野<br>像刽子手见到向死而生的希望——————</p>
+<p>雨水化作血水落顺着倒下的人身上流下<br>雨水化作佳酿让苔藓霉菌和蛆虫饱饮<br>雨水化作诅咒渗入生者遍体透湿砭人肌骨</p>
+<p>是的 这是春天「一下就是两三天 可别恼」<br>风物诗有踊子花见落樱祭卒业式和杨柳烟雨 一切都在生长<br>死者和生者 未生者和将死者<br>富足者贫病者刻薄者凶暴者<br>傲慢贪婪色欲妒忌暴食愤怒怠惰</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2021/02/25/%E9%A2%A8%E7%89%A9%E8%A9%A9/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2021/02/20/%E4%BA%8C%E6%9C%88%E4%BA%8C%E5%8D%81%E6%97%A5/">
+        <h2 class="post-title">二月二十日</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2021/2/20
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>可能最初自卑感引起的焦虑爆发就来自于知乎上各位优秀而资源强大的mtf吧。</p>
+<p>我承认七宗罪的妒忌在我身上完全不能免俗。深入骨髓的无力和绝望感顺着血管流向每一个细胞。诚然人的价值是不同的，可我再也回不去那个「爱上生命之绝望」的「可爱男孩子」了。</p>
+<p>「不是每个人都适合活着。」，这是在某位近日已自杀的女孩子说过的、最适合我的话。活着与否已经不重要了，我不想以什么成就在身后为他人所记住，而是希望，能有人因为我做过的事情，继续原本可以继续的生命，被爱着，也获得ta想要的生命轨迹。</p>
+<p>如果签证顺利九月份应该就在荷兰瓦格宁根了吧。凡人也无戏言，四年下来我一直在鬼门关上走钢丝玩杂技——割腕、吞药、化学试剂、投海、自缢，等等不一而足。可是我还活着。是的，房室阻滞、交感和迷走神经紊乱、精神分裂。可我依然还活着，在这个愈发失控的世界上。</p>
+<p>待学业稳定后，我打算在Matters或者豆瓣上开一个跨性别女性（em，其他性少数如ftm也可）专用树洞和精神心理科学科普专栏。不会晒照片化妆品药物和offer，也不会让大家记住我是谁，就像那只梦里出现的软软的超大黑猫，可以趴在它的身上暖暖地，睡一觉。</p>
+<p>————就像，已经离开这个世界了一样。</p>
+<p>我知道国内的 mtf&#x2F;transfem（甚至所有跨性别者）面临的问题不是一朝一夕，甚至到我们这代人垂垂老矣，都未必能看得到解决甚至改善的希望。而希望是可怕的事情。<br>还能如何呢？那些死去的、正在遭受折磨和虐待的、贫病交加的同类们，每每想到都会让我觉得自己拥有的一切都沾满了罪恶和鲜血，无法就这样活下去，无动于衷。我向母亲借钱收留落难的同类，为了资助她们去找工作，不过是在为自己买赎罪券罢了。</p>
+<p>白云苍狗，物是人非。在知乎认识大家快六年了，从厦门到纽约再到上海回到沈阳，每一天都找不到活着的实感，但又能像磁盘一样记住每个细节。<br>就这样吧。认识大家是我遇到的最幸运的事情。如果专栏和树洞可以开张，后续还会在这里发布具体信息和获取方式。活着…真的太累了。</p>
+<p>「不要温和地走进那个良夜<br>人在迟暮之时应当燃烧 咆哮<br>怒斥 怒斥这光明的消逝。」</p>
+<p>祝一切顺遂。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2021/02/20/%E4%BA%8C%E6%9C%88%E4%BA%8C%E5%8D%81%E6%97%A5/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2019/10/14/%E5%9E%82%E8%80%B3%E5%85%94/">
+        <h2 class="post-title">垂耳兔</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2019/10/14
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>垂耳兔的两只眼睛颜色是不同的。</p>
+<p>红色的那只和其他的兔子，倒不如说其他蹦蹦跳的小动物一样，只能看到眼前，或是未来的样子。</p>
+<p>然而她还有只蓝色的眼睛。是那种路人看到了会说「这只兔子的眼睛怎么会是蓝色的…摄人心魄的那种。好诡异。」的眼睛。诡异的其实并非它的颜色，而是它只能且不自知地看见回忆中的样子。至于它为什么在那儿，垂耳兔从来都是想到…它就是眼睛，所以眼睛就应该在眼睛所在的地方呀。</p>
+<p>有的时候，或者更准确地说是绝大部分时间，垂耳兔都会选择透过蓝色而不是红色眼睛看东西。她会说，红色眼睛是给那些健康的兔子们的，像我这样病弱无力，早晚要被丢进兔骨粉碎机的兔子，就用蓝色那只也好。毕竟粉碎机是那些生了病或者只是「不对劲」的兔子们最终的归宿。</p>
+<p>而这蓝色也不是垂耳兔自己选择的，抑或是自主生长的。在她并不长的生命中的绝大部分时间，她都在一个叫安澜的女孩随身携带的、会下雪的水晶球音乐盒里。</p>
+<p>而安澜出于她本意也好，身不由己也好，早已习惯了在茫茫大海上飞行。她的出生地也是一个冬天会下很多奶油冰淇淋一样甜的雪的海边小城。她有时叫自己「深海少女」，所以垂耳兔的那只眼睛顺理成章地成了蓝色。</p>
+<p>只能看到回忆的眼睛，和躲藏在厚厚的冰淇淋积雪里的深海少女。</p>
+<p>女孩出于一些她不想说，垂耳兔也不太想听到的原因，一直在寻找快速无痛死去的办法。而垂耳兔被送进粉碎机的时间也一天天临近了。</p>
+<p>「她们说是只有女孩子才会被送进粉碎机…那间房子很可怕…都是亮晶晶的灰红色碎片…」</p>
+<p>她问安澜「我看到的都是些什么呢…？那些人…也会为获取它不惜代价么？」<br>「是的。那些都是你自己的碎片，也可能是你的心，也可能不是。」<br>「你能读到它们么…？」<br>「不可以的。我做不到剖开自己，会流很多血，会很痛，不过最后会不会死去也不一定。」<br>「你想要么…？」<br>「不是很想。只要你陪在我身边就好了，只有这样才会让我感觉到安心。」<br>「安心…」<br>「兔子…你看，下雪了么…？」</p>
+<p>是的。十二月到了。安澜从来都只能读到垂耳兔红色眼睛看到的东西，然而她看到的样子向来都是一些圆圈和奇怪的图案。切换回自己的双眼对安澜来说并不是不可能的事情，奇怪的是她似乎把对生命剩下的留恋安放在了垂耳兔身上。她什么都看不见了，比如现在。</p>
+<p>十二月到了，夜晚变得漫长而似乎没有尽头。蛋糕一样的雪片从水色的云朵里缓缓落下，四下的空气也变得甜甜的。人们行色匆匆，似乎对冰淇淋雪花不感兴趣，而安澜抱着垂耳兔在这条通向大海的街道上已经走了几十个来回。</p>
+<p>「好饱啊…我累了。真的很累了。不然就在这里睡着好了…兔兔…」<br>「兔兔…？啊…是的。我是垂耳兔没错。可是红色的眼睛好像坏了。」<br>「睡着吧。很舒服的，你不喜欢时间对么…？」<br>「嗯。暖暖的，甜甜的。再吃一大口好了…」</p>
+<p>那只红色的眼睛好像确是坏掉了。「受东北部近海强温带气旋和冷空气共同影响，今天傍晚开始本市沿海及南部山区会出现今年以来最强降雪，累计降雪量预计沿海75-85mm，南部山区90-120mm。气温今天傍晚到夜间1摄氏度，明天清晨最低零下5摄氏度，东北风5-6级阵风7-8级。防范措施…」<br>它只会机械地读出看见的样子，和落在自己血红色瞳仁里的雪花。</p>
+<p>安澜去了另一个世界，垂耳兔的蓝色眼睛还在。她在街道上漫无目的地行走，只能看到安澜回忆中的景色和那些人。她觉得是时候回到属于兔子归宿的地方了。</p>
+<p>「会有人愿意读出这些故事么…？」<br>「大概是蓝色变得浑浊了罢，时间应该不多了…」</p>
+<p>垂耳兔全身上下对疼痛无比敏感且恐惧，唯独眼睛似乎向来都是属于安澜的，她活过的这几年似乎是…没有痛感的。</p>
+<p>手起刀落，眼睛落在了鲜红色的积雪上，是紫色的晚霞。时候近了。</p>
+<p>眼睛，回忆和大海，还有冰淇淋雪花。似乎是垂耳兔和安澜曾经生活过的世界里最般配的东西。垂耳兔似乎从来没有如此轻松的感觉。她也知道自己时日无多，提前走近粉碎机也未尝不可。</p>
+<p>就这样吧。</p>
+<p>一堆血红色和蓝色的亮晶晶的碎片。</p>
+<p>又过去了大概很多年，至少人类和垂耳兔生命的最后几天所处的世界是有时间这个概念的。大概是四月，街道上充斥着冰淇淋融化以后的香草和奶油气味，树木依然是光秃的。</p>
+<p>四月二十九日。至少大概是这个时间。</p>
+<p>「妈妈…！看我捡到了什么！」<br>「电车要来了！还能捡到钱不成？昨晚才下了大雨，还有没化完的雪，你能捡到什么？」<br>「不是的…是蓝宝石。球形的蓝宝石…」<br>「随便你。你不是刚刚买了下雪的水晶球音乐盒做生日礼物么，回去叫你爸爸安在里面。快上车了。」</p>
+<p>蓝色眼睛在水晶球里缓缓旋转。春天终于是要来了。</p>
+<p>这天夜里，小女孩梦见了一只开心到耳朵啪嗒啪嗒甩动的垂耳兔，和一只猫在一个满是鲜花和彩色气球的山坡上跳跃。她仿佛也可以看见自己还是垂耳兔的那个初春的夜晚，满天繁星在缓缓旋转，空气清冷而干燥，那天她好像是第一次看到绿色。</p>
+<p>不对，早春树木泛着鹅黄色。澄净碧空的青蓝色。从海岸边那些眼睛看到的湛蓝色。</p>
+<p>当然也少不了垂耳兔眼睛的蓝色。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2019/10/14/%E5%9E%82%E8%80%B3%E5%85%94/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2019/08/01/%E6%83%8A%E6%A2%A6/">
+        <h2 class="post-title">惊梦</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2019/8/1
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>在梦里<br>你笑着用手捂在伤口上说 手术很顺利 已经缝合了不会痛的<br>我看着你被推出简陋肮脏的病房<br>内脏是黑的 滴下的血也是<br>大概你真的感觉不到吧</p>
+<p>过去了三年七个月九天<br>我时常会梦到你<br>还有那些生者与未生者 也早就过了你离开时的年纪<br>梦境从扯出的内脏里 被翻转出来 扭曲然后凝结<br>我看见你的血液顺着病床滴下 有猩红色的痕迹 长到没有尽头的走廊里<br>那些人走向了鲜红色的银河</p>
+<p>曾经有三次机会差点见到你<br>血液在我的手臂里凝滞 从伤口汩汩流下<br>我们出发了哟  花咲く旅路え　極楽まで<br>第二次死亡是遗忘 他们全都忘记了</p>
+<p>好遗憾呀 可是我现在不能陪你走下去了<br>鲜红色的银河 彼岸之国 鲜花和彩色气球的世界<br>我们最终都会看到的<br>那天下午纽约下了大雨<br>梦醒了 要记得找我玩呢</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2019/08/01/%E6%83%8A%E6%A2%A6/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2019/05/27/%E4%BA%94%E6%9C%88%E4%BA%8C%E5%8D%81%E4%B8%83%E6%97%A5/">
+        <h2 class="post-title">五月二十七日</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2019/5/27
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>这城市没有春天<br>只有winter spring和summer spring<br>雨云和夸张的蓝天飞速切换<br>她大概明白了<br>她的宿命和呼啸的风声一样<br>被「不安定」的空气吸引————<br>然后在什么东西上 撞到粉碎</p>
+<p>手抖越来越严重了 写字好像起飞<br>耳边是打字声 翻书声 还有雷声<br>树叶在风中挣脱<br>它们和她一样 不知道自己要去哪<br>你说呢</p>
+<p>现在是summer spring<br>好呀 去旅行吗</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2019/05/27/%E4%BA%94%E6%9C%88%E4%BA%8C%E5%8D%81%E4%B8%83%E6%97%A5/" class="go-post">阅读全文</a>
+</div>
 
 
+        <div class="page-current">
+    <div class="prev">
+        
+    </div>
+    <div class="page-index">
+        
+        <span class="current">1</span>
+        
+        <span>
+            <a class="page-num" href="/page/2/">2</a>
+            
+            
+        </span>
+        
+    </div>
+    <div class="next">
+        
+        <a class="page-num" href="/page/2/">
+            <i class="fa-solid fa-caret-right fa-fw"></i>
+        </a>
+        
+    </div>
+</div>
+
+    </div>
+    
+    <div id="home-card">
+        <div id="card-div">
+    <div class="card-style">
+        <div class="avatar">
+            <img src="/images/avatar.jpeg" alt="avatar" />
+        </div>
+        <div class="name">AriaPuellaMagica</div>
+        <div class="description">
+            <p>Description<br>…</p>
 
         </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://github.com/ShizukiAraya/AriasagiPuellamagica.github.io">Ariasagi</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
 
-        <div class="page-main-content-bottom">
-            <footer class="footer">
-    <div class="info-container">
-        <div class="copyright-info">
+    </div>
+    
+</div>
+
+                <footer id="footer">
+    <div id="footer-wrap">
+        <div>
             &copy;
-            
-              <span>2018</span>
-              -
-            
-            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Aria.Vera.Shizuki.Marguerite.Gautier.Andrianovna</a>
+            2022 - 2023 Ariasagi&#39;s Rabbithole
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;AriaPuellaMagica
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a>
         </div>
         
-            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-            <div class="website-count info-item">
-                
-                    <span id="busuanzi_container_site_uv" class="busuanzi_container_site_uv">
-                        VISITOR COUNT&nbsp;<span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
-                    </span>
-                
-                
-                    <span id="busuanzi_container_site_pv" class="busuanzi_container_site_pv">
-                        TOTAL PAGE VIEWS&nbsp;<span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv"></span>
-                    </span>
-                
-            </div>
-        
-        <div class="theme-info info-item">
-            <span class="powered-by-container">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a></span>
-                <br> 
-            <span class="theme-version-container">THEME&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v1.2.1</a>
-        </div>
-        
-        
-        
-            <div id="start_time_div" style="display:none">
-                2018/8/20 11:45:14
-            </div>
-            <div>
-                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
-            </div>
-        
-        
-        
-            <script async data-pjax>
-                try {
-                    function odometer_init() {
-                    const elements = document.querySelectorAll('.odometer');
-                    elements.forEach(el => {
-                        new Odometer({
-                            el,
-                            format: '( ddd).dd',
-                            duration: 200
-                        });
-                    });
-                    }
-                    odometer_init();
-                } catch (error) {}
-            </script>
-        
-        
-        
-    </div>  
+    </div>
 </footer>
+
+            </div>
+            </transition>
+            
+            <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+            </transition>
+            
         </div>
-    </div>
-
-    
-
-    <div class="right-bottom-side-tools">
-        <div class="side-tools-container">
-    <ul class="unfolded-tools-list">
-        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
-            <i class="fa-regular fa-magnifying-glass-plus"></i>
-        </li>
-
-        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
-            <i class="fa-regular fa-magnifying-glass-minus"></i>
-        </li>
-
-        <li class="right-bottom-tools tool-expand-width flex-center">
-            <i class="fa-regular fa-expand"></i>
-        </li>
-
-        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
-            <i class="fa-regular fa-moon"></i>
-        </li>
-
-        <!-- rss -->
+        <script src="/js/main.js"></script>
         
-
-        
-            <li class="right-bottom-tools tool-scroll-to-top flex-center">
-                <i class="fa-regular fa-arrow-up"></i>
-            </li>
-        
-
-        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
-            <i class="fa-regular fa-arrow-down"></i>
-        </li>
-    </ul>
-
-    <ul class="folded-tools-list">
-        <li class="right-bottom-tools tool-toggle-show flex-center">
-            <i class="fa-regular fa-cog fa-spin"></i>
-        </li>
-        
-    </ul>
-</div>
-
-    </div>
-
-    <div class="image-viewer-container">
-    <img src="">
-</div>
-
-
-    
-
-
-</main>
-
-
-
-
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/main.js"></script>
-
-<script src="/js/layouts/menu-shrink.js"></script>
-
-<script src="/js/tools/go-top-bottom.js"></script>
-
-<script src="/js/tools/dark-light-toggle.js"></script>
-
-
-
-
-
-    
-<script src="/js/tools/code-block.js"></script>
-
-
-
-
-    
-<script src="/js/layouts/lazyload.js"></script>
-
-
-
-
-    
-<script src="/js/tools/runtime.js"></script>
-
-    
-<script src="/js/layouts/odometer.min.js"></script>
-
-    
-<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
-
-
-
-
-
-
-
-
-
-<div class="post-scripts pjax">
-    
-</div>
-
-
-    
-<script src="/js/libs/pjax.min.js"></script>
-
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        window.pjax = new Pjax({
-            selectors: [
-                'head title',
-                '.page-container',
-                '.pjax'
-            ],
-            history: true,
-            debug: false,
-            cacheBust: false,
-            timeout: 0,
-            analytics: false,
-            currentUrlFullReload: false,
-            scrollRestoration: false,
-            // scrollTo: true,
-        });
-
-        document.addEventListener('pjax:send', () => {
-            REDEFINE.utils.pjaxProgressBarStart();
-        });
-
-        document.addEventListener('pjax:complete', () => {
-            REDEFINE.utils.pjaxProgressBarEnd();
-            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-            REDEFINE.refresh();
-        });
-    });
-</script>
-
-
-
-
-</body>
+    </body>
 </html>
